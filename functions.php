@@ -45,29 +45,22 @@ add_action( 'after_setup_theme', 'rokophotolite_setup' );
 
 // Registering and enqueuing scripts/stylesheets to header/footer.
 function rokophotolite_scripts() {
-    wp_register_style( 'rokophotolite_style', get_stylesheet_uri());
-	wp_register_style( 'rokophotolite_bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
-	wp_register_style( 'rokophotolite_animate', get_template_directory_uri() . '/css/animate.css');
-	wp_register_style( 'rokophotolite_font_awesome', get_template_directory_uri() . '/css/font-awesome.css');
-    wp_register_style( 'rokophotolite_responsiveness', get_template_directory_uri() . '/css/responsiveness.css');
-
-	wp_enqueue_style( 'rokophotolite_bootstrap' );
-	wp_enqueue_style( 'rokophotolite_animate' );
-	wp_enqueue_style( 'rokophotolite_font_awesome' );
-    wp_enqueue_style( 'rokophotolite_style' );
-	wp_enqueue_style( 'rokophotolite_responsiveness' );
+    wp_enqueue_style( 'rokophotolite_style', get_stylesheet_uri(), array('rokophotolite_bootstrap','rokophotolite_animate','rokophotolite_font_awesome'));
+	wp_enqueue_style( 'rokophotolite_bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
+	wp_enqueue_style( 'rokophotolite_animate', get_template_directory_uri() . '/css/animate.css');
+	wp_enqueue_style( 'rokophotolite_font_awesome', get_template_directory_uri() . '/css/font-awesome.css');
+    wp_enqueue_style( 'rokophotolite_responsiveness', get_template_directory_uri() . '/css/responsiveness.css');
 
     if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
     wp_enqueue_script( 'rokophotolite_modernizr', get_template_directory_uri() . '/js/modernizr.custom.js');
 
-    wp_enqueue_script( 'rokophotolite_jquery-min', get_template_directory_uri() . '/js/jquery.min.js','','',true);
-    wp_enqueue_script( 'rokophotolite_bootstrap', get_template_directory_uri() . '/js/bootstrap.js','','',true);
-    wp_enqueue_script( 'rokophotolite_wow', get_template_directory_uri() . '/js/wow.min.js','','',true);
-    wp_enqueue_script( 'rokophotolite_smooth_scroll', get_template_directory_uri() . '/js/SmoothScroll.js','','',true);
-    wp_enqueue_script( 'rokophotolite_easing', get_template_directory_uri() . '/js/jquery.easing.min.js','','',true);
-    wp_enqueue_script( 'rokophotolite_animate_header', get_template_directory_uri() . '/js/cbpAnimatedHeader.js','','',true);
-    wp_enqueue_script( 'rokophotolite_classie', get_template_directory_uri() . '/js/classie.js','','',true);
-    wp_enqueue_script( 'rokophotolite_main', get_template_directory_uri() . '/js/main.js','','',true);
+    wp_enqueue_script( 'rokophotolite_bootstrap', get_template_directory_uri() . '/js/bootstrap.js',array('jquery'),'',true);
+    wp_enqueue_script( 'rokophotolite_wow', get_template_directory_uri() . '/js/wow.min.js',array('jquery'),'',true);
+    wp_enqueue_script( 'rokophotolite_smooth_scroll', get_template_directory_uri() . '/js/SmoothScroll.js',array('jquery'),'',true);
+    wp_enqueue_script( 'rokophotolite_easing', get_template_directory_uri() . '/js/jquery.easing.min.js',array('jquery'),'',true);
+    wp_enqueue_script( 'rokophotolite_animate_header', get_template_directory_uri() . '/js/cbpAnimatedHeader.js',array('jquery'),'',true);
+    wp_enqueue_script( 'rokophotolite_classie', get_template_directory_uri() . '/js/classie.js',array('jquery'),'',true);
+    wp_enqueue_script( 'rokophotolite_main', get_template_directory_uri() . '/js/main.js',array('jquery'),'',true);
 }
 
 add_action( 'wp_enqueue_scripts', 'rokophotolite_scripts' );
@@ -112,76 +105,6 @@ function rokophotolite_new_setup($args)
 
 	return $output;
 }
-
-function rokophotolite_pagination() {
-
-    if( is_singular() )
-		return;
-
-	global $wp_query;
-
-	/** Stop execution if there's only 1 page */
-	if( $wp_query->max_num_pages <= 1 )
-		return;
-
-	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-	$max   = intval( $wp_query->max_num_pages );
-
-	/**	Add current page to the array */
-	if ( $paged >= 1 )
-		$links[] = $paged;
-
-	/**	Add the pages around the current page to the array */
-	if ( $paged >= 3 ) {
-		$links[] = $paged - 1;
-		$links[] = $paged - 2;
-	}
-
-	if ( ( $paged + 2 ) <= $max ) {
-		$links[] = $paged + 2;
-		$links[] = $paged + 1;
-	}
-
-	echo '<ul class="pagination">' . "\n";
-
-	/**	Previous Post Link */
-	if ( get_previous_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link('&laquo;') );
-
-	/**	Link to first page, plus ellipses if necessary */
-	if ( ! in_array( 1, $links ) ) {
-		$class = 1 == $paged ? ' class="active"' : '';
-
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
-		if ( ! in_array( 2, $links ) )
-			echo '<li><span>…</span></li>';
-	}
-
-	/**	Link to current page, plus 2 pages in either direction if necessary */
-	sort( $links );
-	foreach ( (array) $links as $link ) {
-		$class = $paged == $link ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-	}
-
-	/**	Link to last page, plus ellipses if necessary */
-	if ( ! in_array( $max, $links ) ) {
-		if ( ! in_array( $max - 1, $links ) )
-			echo '<li><span>…</span></li>' . "\n";
-
-		$class = $paged == $max ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
-	}
-
-	/**	Next Post Link */
-	if ( get_next_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_next_posts_link('&raquo;') );
-
-	echo '</ul>' . "\n";
-
-}
-
 
 function rokophotolite_comment($comment, $args, $depth) {
 $GLOBALS['comment'] = $comment;
@@ -519,7 +442,7 @@ function rokophotolite_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('rokophotolite_footer_copyrights', array(
-        'default' => '© Awesome Photography. All Rights Reserved',
+        'default' => '© RokoPhoto Lite. All Rights Reserved',
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'sanitize_text_field'
     ));
