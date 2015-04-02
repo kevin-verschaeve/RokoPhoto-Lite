@@ -12,5 +12,8 @@ License: [GNU General Public License v2.0](http://www.gnu.org/licenses/gpl-2.0.h
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License. See License URI in style.css for further details.
 
+* classie.js 
+Bonzo is Copyright © 2014 Dustin Diaz @ded and licensed under the MIT licence. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
+
 # Support #
 Please visit http://wordpress.org/support/ if you have any questions about the theme.
