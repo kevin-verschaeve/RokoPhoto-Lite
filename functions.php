@@ -39,6 +39,9 @@ function rokophotolite_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'rokophotolite' ),
 	) );
+
+    add_image_size( 'blog_post_thumbnail', 750, 650, true );
+    add_image_size( 'blog_post_thumbnail_mobile', 400, 400, true );
 }
 
 add_action( 'after_setup_theme', 'rokophotolite_setup' );
