@@ -54,6 +54,7 @@ function rokophotolite_scripts() {
     if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
     wp_enqueue_script( 'rokophotolite_modernizr', get_template_directory_uri() . '/js/modernizr.custom.js');
 
+    wp_enqueue_script( 'rokophotolite_navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
     wp_enqueue_script( 'rokophotolite_bootstrap', get_template_directory_uri() . '/js/bootstrap.js',array('jquery'),'',true);
     wp_enqueue_script( 'rokophotolite_wow', get_template_directory_uri() . '/js/wow.min.js',array('jquery'),'',true);
     wp_enqueue_script( 'rokophotolite_smooth_scroll', get_template_directory_uri() . '/js/SmoothScroll.js',array('jquery'),'',true);
