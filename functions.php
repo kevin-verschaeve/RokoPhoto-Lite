@@ -468,7 +468,8 @@ function rokophotolite_registers() {
 	wp_localize_script( 'rokophotolite_customizer_script', 'objectL10n', array(
 		
 		'documentation' => __( 'Documentation', 'rokophotolite' ),
-		'pro' => __('View PRO version','rokophotolite')
+		'pro' => __('View PRO version','rokophotolite'),
+		'review' => __( 'Leave us a review(it will help us)','rokophotolite' ),
 		
 	) );
 }
