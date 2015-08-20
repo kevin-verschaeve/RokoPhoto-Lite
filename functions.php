@@ -125,7 +125,7 @@ $GLOBALS['comment'] = $comment;
             </td>
             <td class="comment-data">
                 <div class="comment-header">
-                    <span class="comment-author"><?php printf(__('%s'), get_comment_author_link()) ?></span>
+                    <span class="comment-author"><?php printf(__('%s', 'rokophotolite'), get_comment_author_link()) ?></span>
                     <span class="comment-date"><?php echo get_comment_date(); ?> <?php _e('on', 'rokophotolite'); ?> <?php echo get_comment_time(); ?></span>
                     <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
                 </div>
@@ -450,7 +450,7 @@ function rokophotolite_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('rokophotolite_footer_copyrights', array(
-        'default' => '© RokoPhoto Lite. All Rights Reserved',
+        'default' => 'RokoPhoto Lite. All Rights Reserved',
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'sanitize_text_field'
     ));
