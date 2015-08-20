@@ -11,6 +11,9 @@ function rokophotolite_setup() {
     if (!isset($content_width)) {
         $content_width = 750;
     }
+	
+	// text domain
+	load_theme_textdomain('rokophotolite', get_template_directory() . '/languages'); 
 
     // Takes care of the <title> tag.
     add_theme_support( 'title-tag' );
@@ -42,6 +45,7 @@ function rokophotolite_setup() {
 
     add_image_size( 'blog_post_thumbnail', 750, 650, true );
     add_image_size( 'blog_post_thumbnail_mobile', 400, 400, true );
+	
 }
 
 add_action( 'after_setup_theme', 'rokophotolite_setup' );
