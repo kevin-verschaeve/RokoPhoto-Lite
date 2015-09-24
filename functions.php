@@ -33,9 +33,11 @@ function rokophotolite_setup() {
     // Add custom header support. http://codex.wordpress.org/Custom_Headers
     add_theme_support('custom-header', array(
         // Defualt image
-        'default-image' => get_template_directory_uri() . '/img/01_services.jpg',
+        'default-image'     => get_template_directory_uri() . '/img/01_services.jpg',
     	// Header text
-    	'header-text' => false,
+    	'header-text'       => false,
+        'width'             => 1360,
+        'height'            => 582
     ));
 
     // This theme uses wp_nav_menu().
