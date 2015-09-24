@@ -999,6 +999,10 @@ table.comment-container {
 #commentform .form-group textarea {
 	width: 100%;
 }
+#comments .add-bottom {
+    border-top: 2px dashed #000;
+    padding-top: 50px;
+}
 /**************************
 ***** Social Connect ******
 **************************/
