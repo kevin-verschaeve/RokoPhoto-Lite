@@ -484,3 +484,25 @@ add_action( 'customize_controls_enqueue_scripts', 'rokophotolite_registers' );
 function rokophotolite_sanitize_pro_version( $input ) {
     return $input;
 }
+
+add_action( 'widgets_init', 'rokophoto_widgets_init' );
+function rokophoto_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar top', 'rokophoto' ),
+        'id'            => 'rokophoto-sidebar-top',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophoto' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+        'name'          => __( 'Sidebar bottom', 'rokophoto' ),
+        'id'            => 'rokophoto-sidebar-bottom',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophoto' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+}
