@@ -33,9 +33,11 @@ function rokophotolite_setup() {
     // Add custom header support. http://codex.wordpress.org/Custom_Headers
     add_theme_support('custom-header', array(
         // Defualt image
-        'default-image' => get_template_directory_uri() . '/img/01_services.jpg',
+        'default-image'     => get_template_directory_uri() . '/img/01_services.jpg',
     	// Header text
-    	'header-text' => false,
+    	'header-text'       => false,
+        'width'             => 1360,
+        'height'            => 582
     ));
 
     // This theme uses wp_nav_menu().
@@ -481,4 +483,26 @@ add_action( 'customize_controls_enqueue_scripts', 'rokophotolite_registers' );
 
 function rokophotolite_sanitize_pro_version( $input ) {
     return $input;
+}
+
+add_action( 'widgets_init', 'rokophoto_widgets_init' );
+function rokophoto_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar top', 'rokophoto' ),
+        'id'            => 'rokophoto-sidebar-top',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophoto' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+        'name'          => __( 'Sidebar bottom', 'rokophoto' ),
+        'id'            => 'rokophoto-sidebar-bottom',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophoto' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
 }

@@ -4,13 +4,12 @@ Theme URI: https://themeisle.com/themes/rokophoto-lite/
 Author: ThemeIsle
 Author URI: https://themeisle.com
 Description: RokoPhoto Lite is an elegant WordPress theme for photographers, writers, and bloggers. This design focuses on your content and is perfect for an elegant blog site.
-Version: 1.1.0
+Version: 1.1.1
 Tags: white, black, one-column, responsive-layout, custom-background, custom-header, custom-menu, featured-images, threaded-comments, translation-ready,photoblogging
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rokophotolite
 */
-
 /*
 CSS Style Structure
 - General
@@ -230,6 +229,9 @@ img.alignright,
 }
 
 .bypostauthor {
+}
+pre {
+	text-align: left;
 }
 /**************************
 ******** Preloader ********
@@ -672,6 +674,8 @@ div.blog {
 	text-align: center;
 	padding-bottom: 100px;
 	color: #000000;
+	float: left;
+	width: 100%;
 }
 .blog-border:hover > h2,
 .blog-border:hover {
@@ -695,8 +699,15 @@ div.blog {
 	height: auto;
 	margin-left: 0px;
 }
-.blog-posts, .blog-post { margin-top: 100px }
-.blog-post .post p { text-align: justify; }
+.blog-posts, .blog-post { 
+	margin-top: 100px 
+}
+.blog-post .post p { 
+	text-align: justify; 
+}
+.blog-post .post ul, ol {
+	text-align: left;
+}
 .divider {
 	width: 100%;
 	height: 5px;
@@ -763,6 +774,8 @@ div.blog {
 	padding-top: 70px;
 	padding-bottom: 40px;
 	text-align: center;
+	float: left;
+	width: 100%;
 }
 #bsocials p {
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
@@ -999,6 +1012,163 @@ table.comment-container {
 #commentform .form-group textarea {
 	width: 100%;
 }
+#comments .add-bottom {
+    border-top: 2px dashed #000;
+    padding-top: 50px;
+}
+/**************************
+******** Sidebar ********
+**************************/
+.secondary-top,
+.secondary-bottom {
+    float: left;
+    width: 100%;
+    background: #FFF;
+}
+.secondary-top .widget,
+.secondary-bottom .widget {
+    border-bottom: 1px dashed #C5C5C5;
+    float: left;
+    width: 100%;
+    padding: 30px 0;
+}
+h2.widgettitle {
+    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased !important;
+    text-align: center;
+    float: left;
+    width: 100%
+}
+.widget-area > li {
+    list-style: none;
+}
+.widget-area label.screen-reader-text {
+    display: none;
+}
+.widget.widget_search {
+    text-align: center;
+}
+.widget.widget_search input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D8D8D8;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.widget.widget_search input[type="submit"] {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    color: #FFF;
+    background-color: #000;
+    border-color: rgba(255, 186, 0, 0);
+    border-radius: 0px;
+    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 20px;
+}
+.widget.widget_search input[type="submit"]:hover {
+    background-color: #FFBE00;
+    color: #FFF;
+}
+.widget select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D8D8D8;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.widget ul {
+    float: left;
+    width: 100%;
+}
+.widget > ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+.widget ul li {
+    float: left;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    font-size: 14px;
+    line-height: 30px;
+}
+.widget.widget_text{
+    text-align: center;
+}
+.widget-area > li:last-child {
+    border: none;
+}
+/* Calendar Widget */
+.widget_calendar table,
+.widget_calendar td {
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+.widget_calendar caption {
+    font-size: 14px;
+    margin: 0;
+    line-height: 40px;
+}
+.widget_calendar th,
+.widget_calendar td {
+    padding: 0;
+    text-align: center;
+}
+.widget_calendar a {
+    display: block;
+    font-weight: bold;
+}
+.widget_calendar a:hover {
+    background-color: #FFBE01;
+    color: #FFF;
+    text-decoration: none;
+}
+.widget_calendar tbody td {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.site-footer .widget_calendar tbody td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.widget_calendar tbody .pad, .site-footer .widget_calendar tbody .pad {
+    background-color: transparent;
+}
+#calendar_wrap {
+    float: left;
+    width: 100%;
+}
+.widget.widget_calendar table {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0;
+    font-size: 14px;
+    line-height: 25px;
+}
+.widget.widget_calendar table thead {
+    background-color: #222222;
+    color: #FFF;
+}
 /**************************
 ***** Social Connect ******
 **************************/
@@ -1044,6 +1214,9 @@ table.comment-container {
 #socials span {
 	font-size: 14px;
 	color: #000000;
+}
+ol.social {
+	text-align: center;
 }
 ol.social li {
 	display: inline-block;
@@ -1176,6 +1349,8 @@ label {
 	color: #ffffff;
 	font-size: 10px;
 	text-align: center;
+	float: left;
+	width: 100%;
 }
 #footer-nav a {
 	color: #ffffff;
