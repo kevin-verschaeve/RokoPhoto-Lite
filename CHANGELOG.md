@@ -1,5 +1,13 @@
 
 
+### 1.1.2 - 23/10/2015
+
+ Changes: 
+
+
+ * Fixed #29 Woocommerce support
+
+
 ### 1.1.1 - 01/10/2015
 
  Changes: 
