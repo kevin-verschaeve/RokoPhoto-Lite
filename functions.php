@@ -47,7 +47,9 @@ function rokophotolite_setup() {
 
     add_image_size( 'blog_post_thumbnail', 750, 650, true );
     add_image_size( 'blog_post_thumbnail_mobile', 400, 400, true );
-	
+    
+    // woocommerce support 
+    add_theme_support( 'woocommerce' );
 }
 
 add_action( 'after_setup_theme', 'rokophotolite_setup' );
