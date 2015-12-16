@@ -56,6 +56,7 @@ add_action( 'after_setup_theme', 'rokophotolite_setup' );
 
 // Registering and enqueuing scripts/stylesheets to header/footer.
 function rokophotolite_scripts() {
+    wp_enqueue_style( 'rokophoto_font', 'fonts.googleapis.com/css?family=Open+Sans:400,600');
     wp_enqueue_style( 'rokophotolite_style', get_stylesheet_uri(), array('rokophotolite_bootstrap','rokophotolite_animate','rokophotolite_font_awesome'));
 	wp_enqueue_style( 'rokophotolite_bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
 	wp_enqueue_style( 'rokophotolite_animate', get_template_directory_uri() . '/css/animate.css');

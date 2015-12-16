@@ -58,7 +58,7 @@ p.large {
 	padding-top: 40px;
 	margin-bottom: -10px;
 	font-weight: 400;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	letter-spacing: 2px;
 }
 p.small {
@@ -66,13 +66,13 @@ p.small {
 	font-weight: 300;
 	margin-bottom: -10px;
 	margin-top: -10px;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	letter-spacing: 2px;
 }
 p.atext {
 	font-size: 12px;
 	font-weight: 300;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	letter-spacing: 2px;
 	width: 60%;
 	left: 0;
@@ -100,19 +100,19 @@ h4,
 h5,
 h6 {
 	text-transform: uppercase;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-weight: 700;
 }
 h1 {
 	text-transform: uppercase;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 76px;
 	letter-spacing: 5px;
 	font-weight: 500;
 	-webkit-font-smoothing: antialiased !important;
 }
 h2 {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 30px;
 	letter-spacing: 8px;
 	font-weight: 500;
@@ -120,7 +120,7 @@ h2 {
 	-webkit-font-smoothing: antialiased !important;
 }
 h4 {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 18px;
 	letter-spacing: 6px;
 	font-weight: 500;
@@ -130,7 +130,7 @@ h4 {
 	margin-bottom: -10px;
 }
 h5 {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: 5px;
@@ -139,7 +139,7 @@ h5 {
 	text-transform: none;
 }
 h6 {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 10px;
 	font-weight: 600;
 	-webkit-font-smoothing: antialiased !important;
@@ -406,7 +406,7 @@ pre {
 .navbar-default .navbar-toggle:focus { background-color: #fed136 }
 .navbar-default .nav li a {
 	text-transform: uppercase;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 12px;
 	letter-spacing: 2px;
 	font-weight: 500;
@@ -778,14 +778,14 @@ div.blog {
 	width: 100%;
 }
 #bsocials p {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	letter-spacing: 2px;
 	color: #ffffff;
 	text-transform: none;
 	-webkit-font-smoothing: antialiased !important;
 }
 #bsocials span.follow {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 30px;
 	letter-spacing: 8px;
 	font-weight: 500;
@@ -914,7 +914,7 @@ a.btn.pull-right:hover {
 }
 #commentform .text-danger { color: #fec503 }
 .form-submit .submit {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 16px;
 	width: 180px;
 	line-height: 10px;
@@ -1033,7 +1033,7 @@ table.comment-container {
     padding: 30px 0;
 }
 h2.widgettitle {
-    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+    font-family: 'Open Sans',"Trebuchet MS",Arial,sans-serif;
     font-size: 24px;
     letter-spacing: 8px;
     font-weight: 500;
@@ -1079,7 +1079,7 @@ h2.widgettitle {
     background-color: #000;
     border-color: rgba(255, 186, 0, 0);
     border-radius: 0px;
-    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+    font-family: 'Open Sans',"Trebuchet MS",Arial,sans-serif;
     letter-spacing: 2px;
     font-size: 18px;
     font-weight: normal;
@@ -1182,14 +1182,14 @@ h2.widgettitle {
 	text-align: center;
 }
 #socials p {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	letter-spacing: 2px;
 	color: #000000;
 	text-transform: none;
 	-webkit-font-smoothing: antialiased !important;
 }
 #socials span.follow {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 30px;
 	letter-spacing: 8px;
 	font-weight: 500;
@@ -1263,7 +1263,7 @@ textarea {
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+	font-family: 'Open Sans',"Trebuchet MS",Arial,sans-serif;
 	font-size: 16px;
 	width: 180px;
 	line-height: 10px;
@@ -1278,14 +1278,14 @@ input[type="submit"] {
 
 label {
 	font-size: 16px;
-	font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+	font-family: 'Open Sans',"Trebuchet MS",Arial,sans-serif;
 }
 .btn-primary {
 	color: #FFFFFF;
 	background-color: #000000;
 	border-color: rgba(255, 186, 0, 0);
 	border-radius: 0px;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	letter-spacing: 2px;
 	font-size: 18px;
 	font-weight: normal;
@@ -1314,7 +1314,7 @@ label {
 	padding-bottom: 2%;
 }
 #footer h2 {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	font-size: 46px;
 	width: 480px;
 	line-height: 30px;
@@ -1333,7 +1333,7 @@ label {
 	transition: all ease .8s;
 }
 #footer p {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	letter-spacing: 2px;
 	color: #ffffff;
 	line-height: 10px;
@@ -1341,7 +1341,7 @@ label {
 	-webkit-font-smoothing: antialiased !important;
 }
 #footer-nav {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
 	letter-spacing: 2px;
 	padding-top: 45px;
 	background-color: #161616;
@@ -1361,7 +1361,7 @@ label {
 /* WooCommerce */
 .woocommerce .products li a.add_to_cart_button,
 .woocommerce ul.products li.product .button {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 14px;
     line-height: 10px;
     text-transform: uppercase;
@@ -1394,7 +1394,7 @@ label {
     color: #FEC503;
 }
 .woocommerce ul.products li.product .onsale {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 14px;
     line-height: 25px;
     text-transform: uppercase;
@@ -1424,7 +1424,7 @@ label {
     padding: 20px;
     margin: 50px auto;
     text-align: center;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 30px;
     letter-spacing: 8px;
     font-weight: 500;
@@ -1514,7 +1514,7 @@ label {
     text-align: center;
 }
 .woocommerce span.onsale {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     border: 1px solid #FEC503;
@@ -1538,7 +1538,7 @@ label {
     min-height: 10px;
 }
 .woocommerce div.product .product_title {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 30px;
     letter-spacing: 8px;
     font-weight: 500;
@@ -1561,7 +1561,7 @@ label {
     color: black;
 }
 .woocommerce div.product form.cart .button {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 28px;
     line-height: 16px;
     text-transform: uppercase;
@@ -1581,7 +1581,7 @@ label {
     margin: 0;
 }
 .woocommerce .quantity .qty {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 28px;
     line-height: 16px;
     text-transform: uppercase;
@@ -1617,7 +1617,7 @@ label {
     border-bottom: none;
     padding: 5px 19px;
     text-align: center;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 12px;
     letter-spacing: 3px;
     font-weight: 500;
@@ -1751,7 +1751,7 @@ label {
     height: 150px;
 }
 .woocommerce #review_form #respond .form-submit input {
-    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+    font-family: 'Open Sans',"Trebuchet MS",Arial,sans-serif;
     font-size: 16px;
     width: 180px;
     line-height: 10px;
@@ -1915,7 +1915,7 @@ label {
 }
 .woocommerce .cart .button, 
 .woocommerce .cart input.button {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 3px;
@@ -1960,7 +1960,7 @@ label {
 .woocommerce a.button.alt, 
 .woocommerce button.button.alt, 
 .woocommerce input.button.alt {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 3px;
@@ -2013,7 +2013,7 @@ label {
 .woocommerce a.button, 
 .woocommerce button.button, 
 .woocommerce input.button {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 3px;
@@ -2057,7 +2057,7 @@ label {
 .woocommerce h3.order_review_heading {
     font-size: 18px;
     letter-spacing: 3px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased !important;
@@ -2068,7 +2068,7 @@ label {
 .woocommerce-checkout .checkout .col-2 h3#ship-to-different-address label {
     font-size: 18px;
     letter-spacing: 3px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased !important; 
@@ -2079,7 +2079,7 @@ label {
 .woocommerce-account .addresses .title h3 {
     font-size: 18px;
     letter-spacing: 3px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased !important;
