@@ -14,7 +14,7 @@
                                     $image_url_mobile = wp_get_attachment_image_src($image_id, 'blog_post_thumbnail_mobile', true);
                                 ?>
                                 <picture>
-                                    <source media="(max-width: 480px)" srcset="<?php echo $image_url_mobile[0]; ?>">
+                                    <source media="(max-width: 480px)" srcset="<?php echo esc_url( $image_url_mobile[0] ); ?>">
                                     <?php the_post_thumbnail( 'blog_post_thumbnail', array( 'class' => "img-responsive")); ?>
                                 </picture>
                             <?php endif; ?>
