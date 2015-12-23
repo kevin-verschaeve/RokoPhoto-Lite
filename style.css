@@ -366,6 +366,10 @@ pre {
 	background-color: #222;
 }
 
+.logged-in.admin-bar .navbar-default.navbar-shrink {
+	top: 32px;
+}
+
 .navbar-default {
 	border-color: transparent;
 	background-color: #222;
