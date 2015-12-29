@@ -491,18 +491,18 @@ function rokophotolite_sanitize_pro_version( $input ) {
 add_action( 'widgets_init', 'rokophoto_widgets_init' );
 function rokophoto_widgets_init() {
     register_sidebar( array(
-        'name'          => __( 'Sidebar top', 'rokophoto' ),
+        'name'          => __( 'Sidebar top', 'rokophotolite' ),
         'id'            => 'rokophoto-sidebar-top',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophoto' ),
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophotolite' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
         'after_title'   => '</h2>',
     ) );
     register_sidebar( array(
-        'name'          => __( 'Sidebar bottom', 'rokophoto' ),
+        'name'          => __( 'Sidebar bottom', 'rokophotolite' ),
         'id'            => 'rokophoto-sidebar-bottom',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophoto' ),
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophotolite' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
