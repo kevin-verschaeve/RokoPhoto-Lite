@@ -6,10 +6,10 @@
           $socialtext = get_theme_mod('rokophotolite_social_text', __( 'Follow Me', 'rokophotolite' ));
           $sociallabel = get_theme_mod('rokophotolite_social_label', __( 'To get the latest update of me and my works', 'rokophotolite' ));
 	  if(!empty($sociallabel)) {
-              echo '<p> '. esc_html( $sociallabel ) .' </p>';
+              echo '<p> '. wp_kses_post( $sociallabel ) .' </p>';
 	  }
 	  if(!empty($socialtext)) {
-              echo '<p>  &gt;&gt; <span class="follow"> '.esc_html( $socialtext ).' </span>  &lt;&lt; </p>';
+              echo '<p>  &gt;&gt; <span class="follow"> '.wp_kses_post( $socialtext ).' </span>  &lt;&lt; </p>';
 	  }
         ?>
         <ol class="social">
@@ -54,7 +54,7 @@
     </section>
 
     <div id="footer-nav">  <!-- Copyright notice on the bottom -->
-      <span><?php $copyright = get_theme_mod('rokophotolite_footer_copyrights', __( 'RokoPhoto Lite. All Rights Reserved', 'rokophotolite' )); if(!empty($copyright)) { echo esc_html( $copyright ); } ?> <br/> <a href="<?php echo esc_url( 'https://themeisle.com/themes/rokophoto-lite/' ); ?>" target="_blank" rel="nofollow"><?php _e( 'RokoPhoto Lite', 'rokophotolite' ); ?></a> <?php _e(' powered by','rokophotolite'); ?> <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>" target="_blank" rel="nofollow"> WordPress</a></span>
+      <span><?php $copyright = get_theme_mod('rokophotolite_footer_copyrights', __( 'RokoPhoto Lite. All Rights Reserved', 'rokophotolite' )); if(!empty($copyright)) { echo wp_kses_post( $copyright ); } ?> <br/> <a href="<?php echo esc_url( 'https://themeisle.com/themes/rokophoto-lite/' ); ?>" target="_blank" rel="nofollow"><?php _e( 'RokoPhoto Lite', 'rokophotolite' ); ?></a> <?php _e(' powered by','rokophotolite'); ?> <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>" target="_blank" rel="nofollow"> WordPress</a></span>
     </div>
 
 <?php wp_footer(); ?>

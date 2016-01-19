@@ -34,7 +34,7 @@
           if(!empty($logourl)) {
             echo '<a class="navbar-brand" href="'.esc_url( home_url( '/' ) ).'"><img src="'. esc_url( $logourl ) .'" alt="logo"></a>';
           } else {
-            echo '<a class="navbar-brand" href="'.esc_url( home_url( '/' ) ).'"><h4>'. esc_html( get_bloginfo( 'name' ) ) .'</h4></a>';
+            echo '<a class="navbar-brand" href="'.esc_url( home_url( '/' ) ).'"><h4>'. wp_kses_post( get_bloginfo( 'name' ) ) .'</h4></a>';
           }
           ?>
         </div>
@@ -59,7 +59,7 @@
           <?php
             $subheadtitle = get_theme_mod('rokophotolite_subhead_title',__( 'Welcome to', 'rokophotolite' ));
             if(!empty($subheadtitle)) {
-                echo '<h4>'. esc_html( $subheadtitle ) .'</h4>';
+                echo '<h4>'. wp_kses_post( $subheadtitle ) .'</h4>';
             }
           ?>
           <h2><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
