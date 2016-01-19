@@ -47,13 +47,16 @@ function rokophotolite_setup() {
 
     add_image_size( 'blog_post_thumbnail', 750, 650, true );
     add_image_size( 'blog_post_thumbnail_mobile', 400, 400, true );
-	
+    
+    // woocommerce support 
+    add_theme_support( 'woocommerce' );
 }
 
 add_action( 'after_setup_theme', 'rokophotolite_setup' );
 
 // Registering and enqueuing scripts/stylesheets to header/footer.
 function rokophotolite_scripts() {
+    wp_enqueue_style( 'rokophoto_font', 'fonts.googleapis.com/css?family=Open+Sans:400,600');
     wp_enqueue_style( 'rokophotolite_style', get_stylesheet_uri(), array('rokophotolite_bootstrap','rokophotolite_animate','rokophotolite_font_awesome'));
 	wp_enqueue_style( 'rokophotolite_bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
 	wp_enqueue_style( 'rokophotolite_animate', get_template_directory_uri() . '/css/animate.css');
@@ -488,18 +491,18 @@ function rokophotolite_sanitize_pro_version( $input ) {
 add_action( 'widgets_init', 'rokophoto_widgets_init' );
 function rokophoto_widgets_init() {
     register_sidebar( array(
-        'name'          => __( 'Sidebar top', 'rokophoto' ),
+        'name'          => __( 'Sidebar top', 'rokophotolite' ),
         'id'            => 'rokophoto-sidebar-top',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophoto' ),
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophotolite' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
         'after_title'   => '</h2>',
     ) );
     register_sidebar( array(
-        'name'          => __( 'Sidebar bottom', 'rokophoto' ),
+        'name'          => __( 'Sidebar bottom', 'rokophotolite' ),
         'id'            => 'rokophoto-sidebar-bottom',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophoto' ),
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'rokophotolite' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
