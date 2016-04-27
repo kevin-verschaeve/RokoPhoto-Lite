@@ -21,6 +21,8 @@
           $flickrurl = get_theme_mod('rokophotolite_flickr_link', '#');
           $googleplusurl = get_theme_mod('rokophotolite_googleplus_link', '#');
           $instagramurl = get_theme_mod('rokophotolite_instagram_link', '#');
+          $mailaddress = get_theme_mod('rokophotolite_mail_link');
+          $linkedin = get_theme_mod('rokophotolite_linkedin_link');
           if(!empty($facebookurl)) {
               echo '<li><a href="'. esc_url( $facebookurl ) .'" title="'. __( 'Facebook', 'rokophotolite' ) .'"><i class="fa fa-facebook fa-2x"></i></a></li>';
           }
@@ -40,13 +42,21 @@
           if(!empty($flickrurl)) {
               echo '<li><a href="'. esc_url( $flickrurl ) .'" title="'. __( 'Flickr', 'rokophotolite' ) .'"><i class="fa fa-flickr fa-2x"></i></a></li>';
           }
-          
+
           if(!empty($googleplusurl)) {
               echo '<li><a href="'. esc_url( $googleplusurl ) .'" title="'. __( 'Google+', 'rokophotolite' ) .'"><i class="fa fa-google-plus fa-2x"></i></a></li>';
           }
-          
+
           if(!empty($instagramurl)) {
               echo '<li><a href="'. esc_url( $instagramurl ) .'" title="'. __( 'Instagram', 'rokophotolite' ) .'"><i class="fa fa-instagram fa-2x"></i></a></li>';
+          }
+
+          if(!empty($mailaddress)) {
+              echo '<li><a href="mailto:'. antispambot( $mailaddress ) .'" title="'. __( 'Mail address', 'rokophotolite' ) .'"><i class="fa fa-envelope-o fa-2x"></i></a></li>';
+          }
+
+          if(!empty($linkedin)) {
+              echo '<li><a href="'. esc_url( $linkedin ) .'" title="'. __( 'LinkedIn', 'rokophotolite' ) .'"><i class="fa fa-linkedin fa-2x"></i></a></li>';
           }
          ?>
         </ol>
